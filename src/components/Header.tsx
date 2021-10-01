@@ -5,7 +5,7 @@ import {
   XIcon,
 } from '@heroicons/react/outline'
 
-export default function Header(): JSX.Element {
+export default function Header(props: { name: string }): JSX.Element {
   return (
     <header>
       <Popover className="relative bg-white" >
@@ -18,7 +18,7 @@ export default function Header(): JSX.Element {
                   src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                   alt=""
                 />
-                <span className="ml-3 text-xl">React Practice</span>
+                <span className="ml-3 text-xl">{props.name}</span>
               </a>
             </div>
             <div className="-mr-2 -my-2 md:hidden" >
